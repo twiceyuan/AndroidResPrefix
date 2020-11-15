@@ -1,65 +1,8 @@
 # AndroidResPrefix
 
-批量添加 Android 的资源文件前缀，并替换其在代码和其他资源文件中的引用，在重命名文件时保留对原有文件的引用（使用 git mv）。目前支持的资源类型：
+批量添加 Android 项目的资源文件前缀，并替换其在代码和其他资源文件中的引用，以解决配置了 `resourcePrefix` 后的 lint 检查的 `Resource with Wrong Prefix` 问题。在重命名文件时保留对原有文件的引用，需要环境安装了 git。
 
-```kotlin
-enum class ResType {
-    /**
-     * Drawable 资源，包含图片文件、xml 类 drawable 文件和 values 中的 <drawable> 定义
-     */
-    Drawable,
-
-    /**
-     * MipMap 资源，包含图片文件、xml 类 mipmap 文件
-     */
-    MipMap,
-
-    /**
-     * 布局文件
-     */
-    Layout,
-
-    /**
-     * 字符串资源
-     */
-    String,
-
-    /**
-     * 字符数组资源
-     */
-    StringArray,
-
-    /**
-     * 量词字符串资源
-     */
-    StringPlurals,
-
-    /**
-     * dimen 定义
-     */
-    Dimension,
-
-    /**
-     * Style 定义
-     */
-    Style,
-
-    /**
-     * Anim 资源
-     */
-    Animation,
-
-    /**
-     * Menu 资源
-     */
-    Menu,
-
-    /**
-     * 颜色资源
-     */
-    Color,
-}
-```
+目前支持的资源类型：[ResType.kt](src/main/kotlin/com/twiceyuan/script/android/res/prefix/bean/ResType.kt)
 
 暂不打算支持的：
 
@@ -76,4 +19,4 @@ enum class ResType {
 ## TODO
 
 - 支持 cli 方式使用
- 
+- 优化过程输出
