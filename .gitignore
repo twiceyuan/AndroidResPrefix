@@ -1,0 +1,7 @@
+/config.properties
+/module_paths.txt
+/ignore_res.txt
+/build
+/.idea
+/.gradle
+/*.iml
